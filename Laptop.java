@@ -157,12 +157,13 @@ public class Laptop {
         case 7 -> {return this.numberCores == Integer.parseInt(filter);}
         case 8 -> {return this.ram == Integer.parseInt(filter);}
         case 9 -> {return this.storageDevices.toString().toLowerCase().contains((filter.toLowerCase()));}
-        case 10 -> {return this.displaySize >= Double.parseDouble(filter);}
+        case 10 -> {return this.displaySize >= Double.parseDouble(filter) &&
+                           this.displaySize < Double.parseDouble(filter) + 1;}
         case 11 -> {return this.displayResolution.toLowerCase().contains(filter.toLowerCase());}
         case 12 -> {return this.videoCard.toLowerCase().contains(filter.toLowerCase());}
         case 13 -> {return this.interfaces.toString().toLowerCase().contains(filter.toLowerCase());}
         case 14 -> {return this.caseColor.toLowerCase().contains(filter.toLowerCase());}
-        case 15 -> {return this.price >= Integer.parseInt(filter);}
+        case 15 -> {return this.price >= Integer.parseInt(filter) && this.price < Integer.parseInt(filter) + 1000;}
     }
         return false;
     }

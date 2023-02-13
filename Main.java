@@ -54,7 +54,7 @@ public class Main {
         laptop04.addInterface(new Interface("HDMI"));
         laptop04.addInterface(new Interface("Bluetooth"));
 
-        Laptop laptop05 = new Laptop("HUAWEI", "53013ERR (BoD-WDH9)", "Win11",
+        Laptop laptop05 = new Laptop("HUAWEI", "53013ERR(BoD-WDH9)", "Win11",
                 "Intel", "Core i5-1135G7", 4.2, 4, 8, 15.6,
                 "1920x1080", "Intel Iris Xe Graphics", "серебро", 50000);
         laptop05.addStorageDevice(new StorageDevice("SSD", "512"));
