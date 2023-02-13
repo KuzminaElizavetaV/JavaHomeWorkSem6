@@ -1,8 +1,15 @@
 import java.util.Objects;
 
+/**
+ * Класс "Итнерфейс" создан для добавления различных дополнительных интефейсов и устройств ноутбука
+ */
 public class Interface {
     private String interfaceType;
 
+    /**
+     *
+     * @param interfaceType тип интерфейса ноутбука
+     */
     public Interface(String interfaceType) {
         this.interfaceType = interfaceType;
     }

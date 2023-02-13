@@ -92,62 +92,18 @@ public class Laptop {
         return price;
     }
 
-
-    public void setCompanyName(String companyName) {
-        this.companyName = companyName;
-    }
-
-    public void setModelName(String modelName) {
-        this.modelName = modelName;
-    }
-
-    public void setOs(String os) {
-        this.os = os;
-    }
-
-    public void setCompanyCPU(String companyCPU) {
-        this.companyCPU = companyCPU;
-    }
-
-    public void setModelCPU(String modelCPU) {
-        this.modelCPU = modelCPU;
-    }
-
-    public void setFrequencyCPU(double frequencyCPU) {
-        this.frequencyCPU = frequencyCPU;
-    }
-
-    public void setNumberCores(int numberCores) {
-        this.numberCores = numberCores;
-    }
-
-    public void setRam(int ram) {
-        this.ram = ram;
-    }
-
-    public void setDisplaySize(double displaySize) {
-        this.displaySize = displaySize;
-    }
-
-    public void setDisplayResolution(String displayResolution) {
-        this.displayResolution = displayResolution;
-    }
-
-    public void setVideoCard(String videoCard) {
-        this.videoCard = videoCard;
-    }
-
-    public void setCaseColor(String caseColor) {
-        this.caseColor = caseColor;
-    }
-
-    public void setPrice(int price) {
-        this.price = price;
-    }
-
+    /**
+     * Метод добавления интерфейса
+     * @param interfaceType тип интерфейса
+     */
     public  void addInterface(Interface interfaceType){
         this.interfaces.append(interfaceType).append(", ");
     }
+
+    /**
+     * Метод добавления накопителя
+     * @param storageDevice тип и объем накопителя
+     */
     public void addStorageDevice(StorageDevice storageDevice){
         this.storageDevices.append(storageDevice).append(", ");
     }
@@ -184,6 +140,12 @@ public class Laptop {
                 getCaseColor(), getPrice());
     }
 
+    /**
+     * Метод проверки прользовательского фильтра
+     * @param key ключ переключателя
+     * @param filter заданный пользователем фильтр
+     * @return
+     */
     public boolean checkUserFilter(int key, String filter)
     {switch (key) {
         case 1 -> {return this.companyName.toLowerCase().contains(filter.toLowerCase());}
